@@ -4,17 +4,32 @@ import { useState } from "react";
 function Dice(){
 
     const num = 1;
-    const diceFace = 6;
+    const [dice1,setDie1] = useState([]);
+    const [dice2,setDie2] = useState([]);
 
-    // const dice1 = Array(diceFace).fill(0);
-    // const dice2 = Array(diceFace).fill(1);
+    const [result1,setResult1] = useState(0);
+    const [result2,setResult2] = useState(0);
 
-    const dice1 = [3,2,4,5,6,7];
-    const dice2 = [4,15,10,3,9,1];
+    const[input1,setInput1] = useState("");
+    const[input2,setInput2] = useState("");
 
+    const changeInput1 = (e) =>{
+        setInput1(e.target.value);
+    }
 
-    const [result1,setResult1] = useState(dice1[0]);
-    const [result2,setResult2] = useState(dice2[0]);
+    const changeInput2 = (e) =>{
+        setInput2(e.target.value);
+    }
+
+    const pick1die = ()=>{
+        const stuff = input1.split(",");
+        setDie1(stuff);
+    }
+
+    const pick2die = ()=>{
+        const stuff = input2.split(",");
+        setDie2(stuff);
+    }
 
     const handleRoll= ()=>{
         setResult1(dice1[Math.floor(Math.random()*(dice1.length))]);
@@ -30,6 +45,8 @@ function Dice(){
                     <div className="dice1Display">
                         {result1}
                     </div>
+                    <input value={input1} onChange={changeInput1}></input>
+                    <button onClick={pick1die}>Pick Player 1 dice</button>
                 </div>
                 <div className="dice2">
                     <div className="diceStat2">
@@ -38,6 +55,8 @@ function Dice(){
                     <div className="dice2Display">
                         {result2}
                     </div>
+                    <input value={input2} onChange={changeInput2}></input>
+                    <button onClick={pick2die}>Pick Player 2 dice</button>
                 </div>
 
            <div className="playButton">
