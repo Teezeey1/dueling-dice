@@ -1,14 +1,11 @@
 import "./Dice.css";
 import { useState } from "react";
 
-function Dice(){
+function Dice({result1, result2,setResult1,setResult2}){
 
     const num = 1;
     const [dice1,setDie1] = useState([]);
     const [dice2,setDie2] = useState([]);
-
-    const [result1,setResult1] = useState(0);
-    const [result2,setResult2] = useState(0);
 
     const[input1,setInput1] = useState("");
     const[input2,setInput2] = useState("");
@@ -22,11 +19,13 @@ function Dice(){
     }
 
     const pick1die = ()=>{
+        //write validation here
         const stuff = input1.split(",");
         setDie1(stuff);
     }
 
     const pick2die = ()=>{
+        //write validation here
         const stuff = input2.split(",");
         setDie2(stuff);
     }

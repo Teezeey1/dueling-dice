@@ -1,7 +1,7 @@
 import PathBlock from "./PathBlock";
 import "./RacePath.css";
 
-function RacePath(){
+function RacePath({result1,result2}){
 
     const PathLength =15;
 
@@ -15,6 +15,8 @@ function RacePath(){
     return(
         <div className="racePath">
             {pathBlock}
+            {result1}
+            {result2}
         </div>
     );
 }
