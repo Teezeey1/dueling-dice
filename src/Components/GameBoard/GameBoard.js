@@ -1,4 +1,6 @@
 import Dice from "../Dice/Dice";
+import DuelingGround from "../DuelingGround/DuelingGround";
+import RacePath from "../RacePath/RacePath";
 import Turn from "../Turn/Turn";
 import "./GameBoard.css";
 
@@ -16,8 +18,8 @@ function GameBoard() {
 
   return (
     <div className='gameBoard'>
-    <Turn player1Turn = {player1Turn}></Turn>
-    <Dice></Dice>
+        <Turn player1Turn = {player1Turn}></Turn>
+        <DuelingGround></DuelingGround>
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import Dice from "../Dice/Dice";
+import RacePath from "../RacePath/RacePath";
 import "./DuelingGround.css";
 
 function DuelingGround(){
@@ -12,8 +13,8 @@ function DuelingGround(){
                 <Dice></Dice>
             </div>
 
-            <div className="racePath">
-                
+            <div className="racePathHolder">
+                <RacePath></RacePath>
             </div>
         </div>
     );
