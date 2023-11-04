@@ -10,7 +10,6 @@ function DuelingGround(){
         <div className="duelingGround"> 
             <div className="diceHolder">
                 <Dice></Dice>
-                <Dice></Dice>
             </div>
 
             <div className="racePathHolder">
