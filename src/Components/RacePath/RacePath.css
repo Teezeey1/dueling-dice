@@ -1,5 +1,6 @@
 .racePath{
     width: 80%;
-    border: 5px solid black;
-    height: 80%;
+    border: 3px solid black;
+    height: 70%;
+    display: flex;   
 }

@@ -1,7 +1,6 @@
 .duelingGround{
-    height: 80%;
+    height: 100%;
     width: 100%;
-    background-color: gray;
 }
 
 .diceHolder{
@@ -10,13 +9,11 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: yellowgreen;
 }
 
 .racePathHolder{
     height: 60%;
     width: 100%;
-    background-color: aqua;
     display: flex;
     justify-content: center;
     align-items: center;
