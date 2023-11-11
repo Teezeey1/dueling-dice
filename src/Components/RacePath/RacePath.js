@@ -7,7 +7,7 @@ function RacePath({result1,result2}){
 
     const path = [];
     for(let i = 0; i < PathLength;++i){
-        path[i] = i + 1
+        path[i] = i;
     }
 
     const pathBlock = path.map((number)=><PathBlock numberOfBlock={number} key={number}></PathBlock>);
@@ -15,8 +15,6 @@ function RacePath({result1,result2}){
     return(
         <div className="racePath">
             {pathBlock}
-            {result1}
-            {result2}
         </div>
     );
 }

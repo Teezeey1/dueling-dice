@@ -19,20 +19,38 @@ function Dice({result1, result2,setResult1,setResult2}){
     }
 
     const pick1die = ()=>{
-        //write validation here
-        const stuff = input1.split(",");
-        setDie1(stuff);
+        const userInput = input1.split(",");   
+        if(Validate(userInput)){
+            setDie1(userInput); 
+        }
     }
 
     const pick2die = ()=>{
-        //write validation here
-        const stuff = input2.split(",");
-        setDie2(stuff);
+        const userInput = input2.split(",");
+        if(Validate(userInput))
+        setDie2(userInput);
     }
 
     const handleRoll= ()=>{
         setResult1(dice1[Math.floor(Math.random()*(dice1.length))]);
         setResult2(dice2[Math.floor(Math.random()*(dice2.length))]);
+    }
+
+    const Validate = (params)=>{
+        let sum = 0;
+        for (let i=0; i<params.length; i++){
+            let num = Number(params[i]);
+            if(isNaN(num)){
+                alert("Please pass in all numbers separate by comma");
+                return false;
+            }
+            sum+= num;
+        }
+        if(sum!== 9){
+            alert("Please pass in combination that sum up to 9");
+            return false;
+        }
+        return true;
     }
 
     return(
