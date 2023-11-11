@@ -1,3 +1,4 @@
+import Validate from "../UsefulFunction/Validate";
 import "./Dice.css";
 import { useState } from "react";
 
@@ -36,25 +37,8 @@ function Dice({result1, result2,setResult1,setResult2}){
         setResult2(dice2[Math.floor(Math.random()*(dice2.length))]);
     }
 
-    const Validate = (params)=>{
-        let sum = 0;
-        for (let i=0; i<params.length; i++){
-            let num = Number(params[i]);
-            if(isNaN(num)){
-                alert("Please pass in all numbers separate by comma");
-                return false;
-            }
-            sum+= num;
-        }
-        if(sum!== 9){
-            alert("Please pass in combination that sum up to 9");
-            return false;
-        }
-        return true;
-    }
-
     return(
-        <div className = "diceHolder2" value = {num}>
+        <div className = "diceHolder" value = {num}>
                 <div className="dice1">
                     <div className="diceStat1">
                         {dice1}

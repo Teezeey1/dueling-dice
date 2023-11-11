@@ -9,8 +9,8 @@ function DuelingGround(){
     const[result2,setResult2] = useState(0);
 
     return(
-        <div className="duelingGround"> 
-            <div className="diceHolder">
+        <div className="duelingGroundHolder"> 
+            <div className="duelingGround">
                 <Dice result1={result1} result2={result2} setResult1={setResult1} setResult2={setResult2}></Dice>
             </div>
 
