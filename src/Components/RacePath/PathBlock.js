@@ -4,7 +4,9 @@ function PathBlock({numberOfBlock}){
 
     return(
        <div className="oneBlock">
-            {numberOfBlock}
+            <div className="oneCircle">
+                {numberOfBlock}
+            </div>
        </div>
     );
 }

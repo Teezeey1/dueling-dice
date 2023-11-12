@@ -1,9 +1,13 @@
+import { useState } from "react";
 import PathBlock from "./PathBlock";
 import "./RacePath.css";
 
 function RacePath({result1,result2}){
 
     const PathLength =15;
+
+    //
+    const [midPoint,setMidPoint] = useState(PathLength / 2);
 
     const path = [];
     for(let i = 0; i < PathLength;++i){

@@ -1,10 +1,5 @@
-.duelingGroundHolder{
-    height: 100%;
-    width: 100%;
-}
-
 .duelingGround{
-    height: 40%;
+    height: 50%;
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -12,7 +7,7 @@
 }
 
 .racePathHolder{
-    height: 60%;
+    height: 40%;
     width: 100%;
     display: flex;
     justify-content: center;

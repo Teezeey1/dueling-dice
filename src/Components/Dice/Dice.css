@@ -44,6 +44,9 @@
     width: 30%;
     height: 50%;
     border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .diceDisplay{
