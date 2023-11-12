@@ -1,17 +1,17 @@
-.oneBlock{
+.blockActive{
     border: 2px solid black;
     height: 100%;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: red;
 }
 
-.oneCircle{
+.block{
     border: 2px solid black;
-    height: 80%;
-    width: 80%;
-    border-radius: 50%;
+    height: 100%;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;

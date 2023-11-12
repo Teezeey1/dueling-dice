@@ -1,13 +1,11 @@
 import "./PathBlock.css";
 
-function PathBlock({numberOfBlock}){
+function PathBlock({numberOfBlock,active}){
 
     return(
-       <div className="oneBlock">
-            <div className="oneCircle">
-                {numberOfBlock}
-            </div>
-       </div>
+        <div className= {`block${active ? 'Active' : ''}`}>
+            {numberOfBlock}
+        </div>
     );
 }
 
