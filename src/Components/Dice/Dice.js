@@ -21,15 +21,29 @@ function Dice({result1, result2,setResult1,setResult2}){
 
     const pick1die = ()=>{
         const userInput = input1.split(",");   
+        console.log(userInput);
         if(Validate(userInput)){
-            setDie1(userInput); 
+            let len =  userInput.length ;
+            if(len<6){
+                setDie1(userInput.concat(Array(6 - len).fill("0")));
+            }           
+            else{
+                setDie1(userInput); 
+            }
         }
     }
 
     const pick2die = ()=>{
-        const userInput = input2.split(",");
-        if(Validate(userInput))
-        setDie2(userInput);
+        const userInput = input2.split(",");   
+        if(Validate(userInput)){
+            let len =  userInput.length ;
+            if(len<6){
+                setDie2(userInput.concat(Array(6 - len).fill("0")));
+            }           
+            else{
+                setDie2(userInput); 
+            }
+        }
     }
 
     const handleRoll= ()=>{
@@ -39,27 +53,44 @@ function Dice({result1, result2,setResult1,setResult2}){
 
     return(
         <div className = "diceHolder" value = {num}>
-                <div className="dice1">
-                    <div className="diceStat1">
-                        {dice1}
+                <div className="dice">
+                    <div className="diceTop">
+                        <div className="diceStat">
+                            {dice1}
+                        </div>
+                        <div className="diceDisplay">
+                            {result1}
+                        </div>
                     </div>
-                    <div className="dice1Display">
-                        {result1}
+                    <div className="'diceLow">
+                        <div className="diceInput">
+                            <input value={input1} onChange={changeInput1}></input>
+                        </div>
+                        <div className="diceButton">
+                            <button onClick={pick1die}>Pick Player 1 dice</button>
+                        </div>
                     </div>
-                    <input value={input1} onChange={changeInput1}></input>
-                    <button onClick={pick1die}>Pick Player 1 dice</button>
-                </div>
-                <div className="dice2">
-                    <div className="diceStat2">
-                        {dice2}
-                    </div>
-                    <div className="dice2Display">
-                        {result2}
-                    </div>
-                    <input value={input2} onChange={changeInput2}></input>
-                    <button onClick={pick2die}>Pick Player 2 dice</button>
                 </div>
 
+                <div className="dice">
+                    <div className="diceTop">
+                        <div className="diceStat">
+                            {dice2}
+                        </div>
+                        <div className="diceDisplay">
+                            {result2}
+                        </div>
+                    </div>
+                    <div className="'diceLow">
+                        <div className="diceInput">
+                            <input value={input2} onChange={changeInput2}></input>
+                        </div>
+                        <div className="diceButton">
+                            <button onClick={pick2die}>Pick Player 2 dice</button>
+                        </div>
+                    </div>
+                </div>
+              
            <div className="playButton">
                 <button onClick={handleRoll}>Roll</button>
            </div>

@@ -6,48 +6,52 @@
     height: 100%;
 }
 
-.dice1{
+.dice{
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
     border: 2px solid black;
     width: 30%;
     height: 70%;
+    background-color: whitesmoke;
 }
 
-.dice1Stat{
+.diceTop{
+    display: flex;
+    height: 70%;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.diceLow{
+    display: flex;
+    height: 30%;
+    width: 100%;
+}
+
+.diceButton{
+    margin-top: 7px;
+}
+
+.playButton{
+    width: 7%;
+    height:30%;
+}
+
+.diceStat{
     width: 30%;
     height: 50%;
+    border: 2px solid black;
 }
 
-.dice1Display{
+.diceDisplay{
     border: 2px solid black;
     height: 50%;
     width: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.dice2{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    border: 2px solid black;
-    width: 30%;
-    height: 70%;
-}
-
-.dice2Stat{
-    width: 30%;
-    height: 50%;
-}
-
-.dice2Display{
-    border: 2px solid black;
-    height: 50%;
-    width: 20%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: blanchedalmond;
 }

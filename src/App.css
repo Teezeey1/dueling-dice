@@ -1,3 +1,12 @@
 .app{
   height: 100vh;
 }
+
+button {
+  height: 50%;
+  width: 70%;
+  border-radius: 8px;
+  font-family: "Arial Black";
+  box-shadow: none;
+  background-color: aquamarine;
+}
