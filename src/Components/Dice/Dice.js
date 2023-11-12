@@ -2,7 +2,7 @@ import Validate from "../UsefulFunction/Validate";
 import "./Dice.css";
 import { useState } from "react";
 
-function Dice({result1, result2,setResult1,setResult2}){
+function Dice({result1, result2,setResult1,setResult2,clickRoll,setClickRoll}){
 
     const num = 1;
     const [dice1,setDie1] = useState([]);
@@ -21,7 +21,6 @@ function Dice({result1, result2,setResult1,setResult2}){
 
     const pick1die = ()=>{
         const userInput = input1.split(",");   
-        console.log(userInput);
         if(Validate(userInput)){
             let len =  userInput.length ;
             if(len<6){
@@ -47,8 +46,14 @@ function Dice({result1, result2,setResult1,setResult2}){
     }
 
     const handleRoll= ()=>{
-        setResult1(dice1[Math.floor(Math.random()*(dice1.length))]);
-        setResult2(dice2[Math.floor(Math.random()*(dice2.length))]);
+        if(dice1.length=== 0 || dice2.length === 0){
+            alert("Please set dice for all players");
+        }
+        else{
+            setResult1(dice1[Math.floor(Math.random()*(dice1.length))]);
+            setResult2(dice2[Math.floor(Math.random()*(dice2.length))]);
+            setClickRoll(clickRoll + 1);
+        }
     }
 
     return(

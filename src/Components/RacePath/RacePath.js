@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import PathBlock from "./PathBlock";
 import "./RacePath.css";
 
-function RacePath({result1,result2}){
+function RacePath({result1,result2,clickRoll}){
 
     const PathLength =15;
 
@@ -16,9 +16,16 @@ function RacePath({result1,result2}){
             else if (Number(result1) > Number(result2)){
                 setCirclePosition(circlePosition + 1);
             }
-        }
-        ,[result1,result2]
+        },
+        [clickRoll]
     );
+
+    if(circlePosition === 0){
+        alert("Player 2 won");
+    }
+    else if (circlePosition === PathLength - 1){
+        alert("Player 1 won")
+    }
 
     const path = [];
     for(let i = 0; i < PathLength;++i){
