@@ -22,3 +22,8 @@ button {
   box-shadow: none;
   background-color: gray;
 }
+
+.playButton{
+  width: 10%;
+  height: 50%;
+}

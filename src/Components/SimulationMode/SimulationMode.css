@@ -1,0 +1,24 @@
+.simulationMode{
+    display:flex;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, gray , whitesmoke);
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.Top{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.Low{
+    display: flex;
+    width: 100%;
+    height:40%;
+    align-items: center;
+    justify-content: space-around;
+}

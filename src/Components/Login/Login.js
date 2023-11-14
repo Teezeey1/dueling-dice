@@ -17,6 +17,10 @@ function Login(){
             navigate('/GameBoard/' + blockNumber);
         }
     }
+
+    const toSimulationMode = ()=>{
+        navigate('/SimulationMode');
+    }
     
 
     const handleChange = (e)=>{
@@ -27,6 +31,10 @@ function Login(){
         <div className="login">
             <div className="loginHeader">
                 <h1>Dueling Dice</h1>
+            </div>
+
+            <div className="playButton">
+                <button onClick={toSimulationMode}>Simulation Mode</button>
             </div>
 
             <div className="loginContent">
