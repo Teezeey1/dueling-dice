@@ -5,13 +5,15 @@ function Result(){
     const navigate = useNavigate();
     const{result} = useParams();
     const handleClick = ()=>{
-        navigate('/catch-up-festival');
+        navigate('/dueling-dice');
     }
 
     return(
         <div className="result">
             <h1>{result}</h1>
-            <button onClick={handleClick}>Play Again</button>
+            <div className="playButton">
+                <button onClick={handleClick}>Play Again</button>
+            </div>
         </div>
     );
 }
