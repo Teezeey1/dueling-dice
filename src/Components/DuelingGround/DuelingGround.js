@@ -3,7 +3,7 @@ import Dice from "../Dice/Dice";
 import RacePath from "../RacePath/RacePath";
 import "./DuelingGround.css";
 
-function DuelingGround(){
+function DuelingGround({numberOfBlock}){
 
     const[result1,setResult1] = useState(0);
     const[result2,setResult2] = useState(0);
@@ -16,7 +16,7 @@ function DuelingGround(){
             </div>
 
             <div className="racePathHolder">
-                <RacePath result1={result1} result2={result2} clickRoll = {clickRoll}></RacePath>
+                <RacePath result1={result1} result2={result2} clickRoll = {clickRoll} numberOfBlock={numberOfBlock}></RacePath>
             </div>
         </div>
     );

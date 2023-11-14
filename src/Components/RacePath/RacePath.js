@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import PathBlock from "./PathBlock";
 import "./RacePath.css";
+import { useNavigate } from "react-router-dom";
 
-function RacePath({result1,result2,clickRoll}){
+function RacePath({result1,result2,clickRoll,numberOfBlock}){
 
-    const PathLength =15;
-
+    const PathLength = numberOfBlock;
+    const navigate = useNavigate();
     const [circlePosition,setCirclePosition] = useState(Math.floor(PathLength/2));
 
     useEffect(
@@ -21,10 +22,10 @@ function RacePath({result1,result2,clickRoll}){
     );
 
     if(circlePosition === 0){
-        alert("Player 2 won");
+        navigate("/Result/" + "Player2 Won")
     }
     else if (circlePosition === PathLength - 1){
-        alert("Player 1 won")
+        navigate("/Result/" + "Player1 Won")
     }
 
     const path = [];

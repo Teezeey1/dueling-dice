@@ -1,10 +1,11 @@
+import { useNavigate } from "react-router-dom";
 import Validate from "../UsefulFunction/Validate";
 import "./Dice.css";
 import { useState } from "react";
 
 function Dice({result1, result2,setResult1,setResult2,clickRoll,setClickRoll}){
 
-    const num = 1;
+    const navigate = useNavigate();
     const [dice1,setDie1] = useState([]);
     const [dice2,setDie2] = useState([]);
 
@@ -45,6 +46,10 @@ function Dice({result1, result2,setResult1,setResult2,clickRoll,setClickRoll}){
         }
     }
 
+    const backToLogin = () =>{
+        navigate('/dueling-dice');
+    }
+
     const handleRoll= ()=>{
         if(dice1.length=== 0 || dice2.length === 0){
             alert("Please set dice for all players");
@@ -57,7 +62,7 @@ function Dice({result1, result2,setResult1,setResult2,clickRoll,setClickRoll}){
     }
 
     return(
-        <div className = "diceHolder" value = {num}>
+        <div className = "diceHolder">
                 <div className="dice">
                     <div className="diceTop">
                         <div className="diceStat">
@@ -69,7 +74,7 @@ function Dice({result1, result2,setResult1,setResult2,clickRoll,setClickRoll}){
                     </div>
                     <div className="'diceLow">
                         <div className="diceInput">
-                            <input value={input1} onChange={changeInput1}></input>
+                            <input value={input1} style={{width: "100%"}} onChange={changeInput1}></input>
                         </div>
                         <div className="diceButton">
                             <button onClick={pick1die}>Pick Player 1 dice</button>
@@ -88,7 +93,7 @@ function Dice({result1, result2,setResult1,setResult2,clickRoll,setClickRoll}){
                     </div>
                     <div className="'diceLow">
                         <div className="diceInput">
-                            <input value={input2} onChange={changeInput2}></input>
+                            <input value={input2} style={{width: "100%"}} onChange={changeInput2}></input>
                         </div>
                         <div className="diceButton">
                             <button onClick={pick2die}>Pick Player 2 dice</button>
@@ -98,6 +103,10 @@ function Dice({result1, result2,setResult1,setResult2,clickRoll,setClickRoll}){
               
            <div className="playButton">
                 <button onClick={handleRoll}>Roll</button>
+           </div>
+
+           <div className="playButton">
+                <button onClick={backToLogin}>Go Back</button>
            </div>
         </div>
     );
