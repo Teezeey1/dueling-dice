@@ -62,7 +62,7 @@ function SimulationMode (){
         }
         else{
             const[time1Won, time2Won] = SimulationTest(dice1,dice2,pathLength,ilteration);
-            navigate("/Result/" + "Player1 Won " + time1Won + " time, and Player2 Won" + time2Won + " time");
+            navigate("/Result/" + "Player1 Won " + time1Won + " time, and Player2 Won " + time2Won + " time");
         }
     }
 
