@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/dueling-dice/static/css/main.021d960b.css",
+    "main.js": "/dueling-dice/static/js/main.6724086f.js",
+    "static/js/787.4d42a790.chunk.js": "/dueling-dice/static/js/787.4d42a790.chunk.js",
+    "static/media/dice.jpg": "/dueling-dice/static/media/dice.2cedd501deb141384534.jpg",
+    "index.html": "/dueling-dice/index.html",
+    "main.021d960b.css.map": "/dueling-dice/static/css/main.021d960b.css.map",
+    "main.6724086f.js.map": "/dueling-dice/static/js/main.6724086f.js.map",
+    "787.4d42a790.chunk.js.map": "/dueling-dice/static/js/787.4d42a790.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.021d960b.css",
+    "static/js/main.6724086f.js"
+  ]
+}
