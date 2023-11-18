@@ -63,20 +63,24 @@ function Dice({result1, result2,setResult1,setResult2,clickRoll,setClickRoll}){
 
     return(
         <div className = "diceHolder">
+            <div className="topTop">
                 <div className="dice">
                     <div className="diceTop">
+                        <label>dice status:</label>
                         <div className="diceStat">
                             {dice1}
                         </div>
+                        <label>dice roll:</label>
                         <div className="diceDisplay">
                             {result1}
                         </div>
                     </div>
                     <div className="'diceLow">
                         <div className="diceInput">
+                            <label>Input dice value:</label>
                             <input value={input1} style={{width: "100%"}} onChange={changeInput1}></input>
                         </div>
-                        <div className="diceButton">
+                        <div className="playButton">
                             <button onClick={pick1die}>Pick Player 1 dice</button>
                         </div>
                     </div>
@@ -84,30 +88,36 @@ function Dice({result1, result2,setResult1,setResult2,clickRoll,setClickRoll}){
 
                 <div className="dice">
                     <div className="diceTop">
+                    <label>dice status:</label>
                         <div className="diceStat">
                             {dice2}
                         </div>
+                        <label>dice roll:</label>
                         <div className="diceDisplay">
                             {result2}
                         </div>
                     </div>
                     <div className="'diceLow">
                         <div className="diceInput">
+                        <label>Input dice value:</label>
                             <input value={input2} style={{width: "100%"}} onChange={changeInput2}></input>
                         </div>
-                        <div className="diceButton">
+                        <div className="playButton">
                             <button onClick={pick2die}>Pick Player 2 dice</button>
                         </div>
                     </div>
                 </div>
+            </div>
               
-           <div className="playButton">
-                <button onClick={handleRoll}>Roll</button>
-           </div>
+            <div className="lowLow">
+            <div className="playButton">
+                    <button onClick={handleRoll}>Roll</button>
+            </div>
 
-           <div className="playButton">
-                <button onClick={backToLogin}>Go Back</button>
-           </div>
+            <div className="playButton">
+                    <button onClick={backToLogin}>Go Back</button>
+            </div>
+           </div>  
         </div>
     );
 }

@@ -1,13 +1,14 @@
 .duelingGround{
-    height: 50%;
+    height: 70%;
     width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
+
 }
 
 .racePathHolder{
-    height: 40%;
+    height: 30%;
     width: 100%;
     display: flex;
     justify-content: center;

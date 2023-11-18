@@ -4,7 +4,7 @@ function PathBlock({numberOfBlock,active}){
 
     return(
         <div className= {`block${active ? 'Active' : ''}`}>
-            {numberOfBlock}
+            {numberOfBlock + 1}
         </div>
     );
 }

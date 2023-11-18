@@ -105,15 +105,17 @@ function SimulationMode (){
         <div className='Top'>
             <div className="dice">
                 <div className="diceTop">
+                    <label>Dice Status:</label>
                     <div className="diceStat">
                         {dice1}
                     </div>
                 </div>
                 <div className="'diceLow">
+                    <label>Input Dice:</label>
                     <div className="diceInput">
                         <input value={input1} style={{width: "100%"}} onChange={changeInput1}></input>
                     </div>
-                    <div className="diceButton">
+                    <div className="playButton">
                         <button onClick={pick1die}>Pick Player 1 dice</button>
                     </div>
                 </div>
@@ -121,15 +123,17 @@ function SimulationMode (){
 
             <div className="dice">
                 <div className="diceTop">
+                     <label>Dice Status:</label>
                     <div className="diceStat">
                         {dice2}
                     </div>
                 </div>
                 <div className="'diceLow">
                     <div className="diceInput">
+                    <label>Input dice value:</label>
                         <input value={input2} style={{width: "100%"}} onChange={changeInput2}></input>
                     </div>
-                    <div className="diceButton">
+                    <div className="playButton">
                         <button onClick={pick2die}>Pick Player 2 dice</button>
                     </div>
                 </div>
@@ -139,15 +143,15 @@ function SimulationMode (){
         <div className='Low'>
             <div className='pathtLengthBox'>
                 <div className='pathLengthInput'>
-                    <label>Set Path Length, enter an odd number</label>
-                    <input type="number" style={{width: "20%"}} onChange={changeInput3}></input>
+                    <label>Set odd path length:</label>
+                    <input type="number" style={{width: "30%"}} onChange={changeInput3}></input>
                     <div className="playButton">
                         <button onClick={handlePathLength}>Set Length</button>
                 </div>
                 </div>
                 <div className='pathLengthInput'>
                     <label>Set iteration</label>
-                    <input type="number" style={{width: "20%"}} onChange={changeInput4}></input>
+                    <input type="number" style={{width: "30%"}} onChange={changeInput4}></input>
                     <div className="playButton">
                         <button onClick={handleiteration}>Set iteration</button>
                 </div>

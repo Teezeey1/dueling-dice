@@ -12,11 +12,15 @@ code {
 #root{
   height: 100%;
   width:100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('../public/dice.jpg');
 }
 
 button {
-  height: 50%;
-  width: 70%;
+  height: 50px;
+  width: 100px;
   border-radius: 8px;
   font-family: "Arial Black";
   box-shadow: none;
@@ -24,6 +28,9 @@ button {
 }
 
 .playButton{
-  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
   height: 50%;
 }
