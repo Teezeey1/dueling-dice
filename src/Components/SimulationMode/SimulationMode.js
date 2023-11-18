@@ -50,7 +50,7 @@ function SimulationMode (){
         }
     }
 
-    const calculateWinning =()=>{
+    const calculateWinning = async ()=>{
         if(dice1.length === 0 || dice2.length===0){
             alert("Please set dice for both player");
         }
@@ -61,7 +61,7 @@ function SimulationMode (){
             alert("Please set iterations");
         }
         else{
-            const[time1Won, time2Won] = SimulationTest(dice1,dice2,pathLength,ilteration);
+            const[time1Won, time2Won] = await SimulationTest(dice1,dice2,pathLength,ilteration);
             navigate("/Result/" + "Player1 Won " + time1Won + " time, and Player2 Won " + time2Won + " time");
         }
     }
@@ -90,6 +90,9 @@ function SimulationMode (){
         if(input4 <=0){
             alert("Enter an iteration");
         }
+        else if (input4 >=10000000){
+            alert("Too big of iteration");
+        }
         else {
             setIteration(input4);
         }
@@ -116,7 +119,7 @@ function SimulationMode (){
                         <input value={input1} style={{width: "100%"}} onChange={changeInput1}></input>
                     </div>
                     <div className="playButton">
-                        <button onClick={pick1die}>Pick Player 1 dice</button>
+                        <button className='active' onClick={pick1die}>Pick Player 1 dice</button>
                     </div>
                 </div>
             </div>

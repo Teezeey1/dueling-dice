@@ -24,8 +24,17 @@ button {
   border-radius: 8px;
   font-family: "Arial Black";
   box-shadow: none;
-  background-color: gray;
+  background-color: lightblue;
 }
+
+ button:hover{
+  height: 50px;
+  width: 100px;
+  border-radius: 8px;
+  font-family: "Arial Black";
+  box-shadow: none;
+  background-color: beige;
+ }
 
 .playButton{
   display: flex;
