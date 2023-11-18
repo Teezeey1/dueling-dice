@@ -111,7 +111,7 @@ function SimulationMode (){
                     </div>
                 </div>
                 <div className="'diceLow">
-                    <label>Input Dice:</label>
+                <label>Input dice value:</label>
                     <div className="diceInput">
                         <input value={input1} style={{width: "100%"}} onChange={changeInput1}></input>
                     </div>
@@ -150,8 +150,8 @@ function SimulationMode (){
                 </div>
                 </div>
                 <div className='pathLengthInput'>
-                    <label>Set iteration</label>
-                    <input type="number" style={{width: "30%"}} onChange={changeInput4}></input>
+                    <label>Set iteration:</label>
+                    <input type="number" style={{width: "25%"}} onChange={changeInput4}></input>
                     <div className="playButton">
                         <button onClick={handleiteration}>Set iteration</button>
                 </div>
