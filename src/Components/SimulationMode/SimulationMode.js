@@ -15,6 +15,8 @@ function SimulationMode (){
     const[input2,setInput2] = useState("");
     const[input3,setInput3] = useState(0);
     const[input4,setInput4] = useState(0);
+    const[time1, setTime1] = useState(0);
+    const [time2,setTime2] = useState(0);
 
     const changeInput1 = (e) =>{
         setInput1(e.target.value);
@@ -62,7 +64,8 @@ function SimulationMode (){
         }
         else{
             const[time1Won, time2Won] = await SimulationTest(dice1,dice2,pathLength,ilteration);
-            navigate("/Result/" + "Player1 Won " + time1Won + " time, and Player2 Won " + time2Won + " time");
+            setTime1(time1Won);
+            setTime2(time2Won);
         }
     }
 
@@ -160,6 +163,17 @@ function SimulationMode (){
                 </div>
                 </div>
 
+            </div>
+
+            <div className='resultBoard'>
+                <div className='playerScore'>
+                    <label>Time Player 1 won:</label>
+                    <div>{time1}</div>
+                </div>
+                <div className='playerScore'>
+                    <label>Time Player 2 won:</label>
+                    <div>{time2}</div>
+                </div>            
             </div>
 
             <div className='buttonLow'>
