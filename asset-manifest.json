@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/dueling-dice/static/css/main.021d960b.css",
-    "main.js": "/dueling-dice/static/js/main.6724086f.js",
+    "main.css": "/dueling-dice/static/css/main.f631f8a6.css",
+    "main.js": "/dueling-dice/static/js/main.4b5fd67b.js",
     "static/js/787.4d42a790.chunk.js": "/dueling-dice/static/js/787.4d42a790.chunk.js",
     "static/media/dice.jpg": "/dueling-dice/static/media/dice.2cedd501deb141384534.jpg",
     "index.html": "/dueling-dice/index.html",
-    "main.021d960b.css.map": "/dueling-dice/static/css/main.021d960b.css.map",
-    "main.6724086f.js.map": "/dueling-dice/static/js/main.6724086f.js.map",
+    "main.f631f8a6.css.map": "/dueling-dice/static/css/main.f631f8a6.css.map",
+    "main.4b5fd67b.js.map": "/dueling-dice/static/js/main.4b5fd67b.js.map",
     "787.4d42a790.chunk.js.map": "/dueling-dice/static/js/787.4d42a790.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.021d960b.css",
-    "static/js/main.6724086f.js"
+    "static/css/main.f631f8a6.css",
+    "static/js/main.4b5fd67b.js"
   ]
 }
